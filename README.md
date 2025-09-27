@@ -30,32 +30,11 @@ SpectraSphere also integrates with **Snap Spectacles**:
 This repo ships a single runnable app for demos: **`spectacles/`**.  
 No separate backend/frontend needed.  
 
-### 1. Clone the repo
+### Clone the repo
 ```bash
 git clone https://github.com/your-username/spectrasphere.git
 cd spectrasphere/spectacles
 ```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Configure environment variables
-Create a `.env` file in `spectacles/` (or use Lenstudio Project Settings) with:
-
-```env
-# Public JSON endpoint with your generated story
-VITE_STORY_URL=https://api.jsonbin.io/v3/b/<JSONBIN_ID>/latest?meta=false
-```
-
-### 4. Run the app
-```bash
-npm run dev
-```
-
-Now open the preview URL (or `http://localhost:3000`) and load the app into Snap Spectacles.
-
 ---
 
 ## 💻 Run in Lenstudio
@@ -63,19 +42,16 @@ Now open the preview URL (or `http://localhost:3000`) and load the app into Snap
 1. Go to [Lenstudio](https://lenstudio.dev) and **import this repo**  
    - *New Project* → *Import from GitHub* → paste the repo URL  
 
-2. Open a terminal in Lenstudio and run:
-```bash
-cd spectacles
-npm install
-npm run dev
-```
+2. Open Lenstudio and Download the Remote Service Gateway Module from Asset Library
+   - Add the obtained API key to the Remote Service Gateway Component
+    
 
-3. In **Project Settings → Environment**, add:
+3. In **Story Viewer Object**, Under API Endpoint, add:
 ```env
-VITE_STORY_URL=https://api.jsonbin.io/v3/b/<JSONBIN_ID>/latest?meta=false
+https://api.jsonbin.io/v3/b/<JSONBIN_ID>/latest?meta=false
 ```
 
-4. Use the **public preview URL** that Lenstudio provides for `spectacles/`.  
+4. Run the App by Clicking on **Preview Lenses** on Lenstudio.  
 
 ---
 
